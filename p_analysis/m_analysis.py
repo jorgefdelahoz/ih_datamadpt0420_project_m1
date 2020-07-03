@@ -19,6 +19,7 @@ def analyce_data(df, country='all'):
     df= df.rename(columns={'country':'Country','title':'Job Title', 'gender':'Gender'})
     return df
 
+# Filtering votes In Favour | Against | No Vote/NA 
 def judgement(df):
     df = df[['vote', 'arguments_for', 'arguments_against']]
     df['arguments_for'].replace('None of the above', np.nan)

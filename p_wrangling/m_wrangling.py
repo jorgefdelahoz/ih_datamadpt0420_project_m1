@@ -18,7 +18,7 @@ def replace_str(df):
     return df
 
 
-# Apply same structure in
+# Filter at column age with values lenght = 4, and calculate the subtract between 2016 and value
 def age(df):
     if len(df) == 4:
         age = np.subtract(2016,int(df))
@@ -26,10 +26,12 @@ def age(df):
     else:
         return df
 
+# Apply it in dataframe with all rows
 def clean_age(df):
     df['age'] = df['age'].apply(age)
     return df
 
+# Get cleaning results concat all functions
 def wrangling(df):
     df_lower_case = lower_case(df)
     df_replace_str = replace_str(df_lower_case)
