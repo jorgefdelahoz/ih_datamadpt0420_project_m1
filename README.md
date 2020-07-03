@@ -1,39 +1,25 @@
 # IRONHACK DATA ANALYTICS - MODULE 1: DATA PIPELINE
 
-THIS API GOES WITH STABILISERS
+** THIS API GOES WITH STABILISERS **
 
 ![Image](https://66.media.tumblr.com/f12be6275f5fb05d9d3cff544a53077e/tumblr_mhjvnpzadC1ruw1vso2_400.gifv)
 
 ---
 
-## **Formatting**
-Your readers will most likely view your README in a browser so please keep that in mind when formatting its content: 
-- Use proper format when necesary (e.g.: `import pandas as pd`). 
-- Categorize content using two or three levels of header beneath. 
-- Make use of **emphasis** to call out important words. 
-- Link to project pages for related libraries you mention. Link to Wikipedia, Wiktionary, even Urban Dictionary definitions for words of which a reader may not be familiar. Make amusing cultural references. 
-- Add links to related projects or services. 
-
-> Here you have a markdown cheatsheet [Link](https://commonmark.org/help/) and tutorial [Link](https://commonmark.org/help/tutorial/).
-
-
-## **Start writing ASAP:**
-*Last but not least, by writing your README soon you give yourself some pretty significant advantages. Most importantly, you’re giving yourself a chance to think through the project without the overhead of having to change code every time you change your mind about how something should be organized or what should be included.*
-
-
-## **Suggested Structure:**
-
 ### :raising_hand: **Name** 
-Self-explanatory names are best. If the name sounds too vague or unrelated, it may be a signal to move on. It also must be catchy. Images, Logo, Gif or some color is strongly recommended.
+Country-Gender-Jobs Pipeline
 
 ### :baby: **Status**
-Alpha, Beta, 1.1, Ironhack Data Analytics Final Project, etc... It's OK to write a sentence, too. The goal is to let interested people know where this project is at.
+Alpha or... Beta, 2.1?
+Ironhack Data Analytics Module 1 Project. 
 
 ### :running: **One-liner**
 Having a one-liner that describes the pipeline/api/app is useful for getting an idea of what your code does in slightly greater detail. 
 
 ### :computer: **Technology stack**
-Python, Pandas, Scipy, Scikit-learn, etc. Indicate the technological nature of the software, including primary programming language(s), main libraries and whether the software is intended as standalone or as a module in a framework or other ecosystem.
+Libraries necesaries: Python, Pandas, Numpy, Argparse, SqlAlchemy, Jsonschema, BeautifulSoup4, lxml, Requests. 
+Pycharm v2020.1.2
+Jupyter Notebook
 
 ### :boom: **Core technical concepts and inspiration**
 Why does it exist? Frame your project for the potential user. Compare/contrast your project with other, similar projects so the user knows how it is different from those projects. Highlight the technical concepts that your project demonstrates or supports. Keep it very brief.
