@@ -14,7 +14,7 @@ Alpha or... Beta, 2.1?
 Ironhack Data Analytics Module 1 Project. 
 
 ### :running: **One-liner**
-Retrieve Jobs Title with DDBB, API & Web Scrapping.
+Retrieve Jobs Title with DDBB, API & Web Scraping.
 
 ### :computer: **Technology stack**
 Libraries necesaries: Python, Pandas, Numpy, Argparse, SqlAlchemy, Jsonschema, BeautifulSoup4, lxml, Requests. 
@@ -53,7 +53,7 @@ Arguments HELP:
     |   |   ├── raw_data_project_m1.db
     |   |   ├── raw_df_database_merge.csv
     |   |   ├── raw_db_jobs_tile.csv
-    |   |   └── raw_df_scrapping_countries.csv
+    |   |   └── raw_df_scraping_countries.csv
     |   └── results
     |       ├── Bonus1-Data_Opinions.csv
     |       └── country_gender_analysed.csv
