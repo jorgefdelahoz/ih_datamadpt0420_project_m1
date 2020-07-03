@@ -18,17 +18,23 @@ Retrieve Jobs Title with DDBB, API & Web Scrapping.
 
 ### :computer: **Technology stack**
 Libraries necesaries: Python, Pandas, Numpy, Argparse, SqlAlchemy, Jsonschema, BeautifulSoup4, lxml, Requests. 
+
 Pycharm v2020.1.2
+
 Jupyter Notebook
 
 ### :boom: **Core technical concepts and inspiration**
 Report generator at date execution.
 
 ### :wrench: **Configuration**
-Database
-Requeriments, prerequisites, dependencies, installation instructions.
+[Database](http://www.potacho.com/files/ironhack/raw_data_project_m1.db)
+
+[API Swagger](http://api.dataatwork.org/v1/spec/) (Work Data Initiative)
+
+[Web Eurostat](https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Country_codes) 
 
 ### :see_no_evil: **Usage**
+
 Parameters, return values, known issues, thrown errors.
 
 ### :file_folder: **Folder structure**
