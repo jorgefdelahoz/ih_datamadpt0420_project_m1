@@ -7,7 +7,7 @@ Bearing that in mind, your job is to:
 - Show them how they use it.
 - Tell them any other relevant details.
 
-![Image](https://res.cloudinary.com/springboard-images/image/upload/q_auto,f_auto,fl_lossy/wordpress/2019/05/aiexcerpt.png)
+![Image](https://66.media.tumblr.com/f12be6275f5fb05d9d3cff544a53077e/tumblr_mhjvnpzadC1ruw1vso2_400.gifv)
 
 ---
 
