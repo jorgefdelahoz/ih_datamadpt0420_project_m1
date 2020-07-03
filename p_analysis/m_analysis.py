@@ -2,6 +2,7 @@ import re
 import numpy as np
 import pandas as pd
 
+# Analyse data / Arguments: data & string
 def analyce_data(df, country='all'):
     lst_groups = ['country', 'title', 'gender']
     df['Quantity'] = 0
@@ -9,13 +10,13 @@ def analyce_data(df, country='all'):
     total = df['Quantity'].sum()
     df['Percentage'] = df['Quantity'].apply(lambda x: ("{:.3%}".format(x / total)))
 
-
     if country != 'all':
         print(f'Filtered by {country}\nExporting into csv...')
         df = df[df['country'] == country.title()]
     else:
         print('-------------------------------------------\n\t\tALL COUNTRIES SELECTED\n------------------------------'
               '-------------')
+    df= df.rename(columns={'country':'Country','title':'Job Title', 'gender':'Gender'})
     return df
 
 def judgement(df):
@@ -34,4 +35,3 @@ def judgement(df):
                                               'arguments_against': 'Number of Cons Arguments'})
 
     return df_opinions
-

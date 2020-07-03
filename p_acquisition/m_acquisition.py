@@ -1,18 +1,18 @@
 # General libs
 import pandas as pd
 from functools import reduce
-import requests
+import requests, time
 # Libs used with DDBB
 from sqlalchemy import create_engine
 from sqlalchemy.pool import StaticPool
 # Libs used with API
 import json
-# Libs used with Web Scrapping
+# Libs used with Web Scraping
 from bs4 import BeautifulSoup
 import re
 
 
-
+# Create connection with database
 def get_engine_db(path):
     print(f'...starting connection with database...')
     engine = create_engine(f'sqlite:///{path}', poolclass=StaticPool)
@@ -26,25 +26,33 @@ def get_engine_db(path):
 
     return df_database_merge
 
+# Create connection with API & get job titles
 def get_api_jobs(jobs):
     jobs_id = list(pd.unique(jobs['normalized_job_code']))
     jobs_id.remove(None)
     request_list = [requests.get(f'http://api.dataatwork.org/v1/jobs/{job_id}').json() for job_id in jobs_id]
     request_json = json.dumps(request_list)
     df_jobs_title = pd.read_json(request_json)
-    print('Extracting API info into raw_df_jobs_title.csv...')
+    print('Exporting API info into raw_df_jobs_title.csv...')
+    print('....', end='')
+    time.sleep(1)
+    print('....', end='')
+    time.sleep(1)
+    print('....', end='')
+    time.sleep(3)
     df_jobs_title.to_csv('./data/raw/raw_df_jobs_title.csv', index=False)
+    print(f'COMPLETE\nExported in ./data/raw/raw_df_jobs_title.csv')
 
     return df_jobs_title
 
-
+# Connect API with data .csv
 def get_api_provisional(jobs):
     df_jobs_title=pd.read_csv('./data/raw/raw_df_jobs_title.csv')
 
     return df_jobs_title
 
-
-def get_web_scrapping(countries):
+# Scrap Country from url
+def get_web_scraping(countries):
     url = 'https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Country_codes'
     html = requests.get(url).content
     soup = BeautifulSoup(html, 'lxml')
@@ -60,7 +68,15 @@ def get_web_scrapping(countries):
     df_country_relationship = pd.DataFrame(country_relationship)
     df_country_relationship_colnames = ['country', 'country_code']
     df_country_relationship.columns = df_country_relationship_colnames
-    df_country_relationship.to_csv('./data/raw/raw_df_scrapping_countries.csv')
+    print('Exporting raw_df_scraping_countries.csv...')
+    print('....', end='')
+    time.sleep(1)
+    print('....', end='')
+    time.sleep(1)
+    print('....', end='')
+    time.sleep(3)
+    df_country_relationship.to_csv('./data/raw/raw_df_scraping_countries.csv')
+    print(f'COMPLETE\nExported to /data/raw/raw_df_scraping_countries.csv')
 
     return df_country_relationship
 
@@ -68,12 +84,12 @@ def get_web_scrapping(countries):
 # def df_merge(data):
 #     df_db = pd.read_csv('./data/raw/raw_df_database_merge.csv')
 #     df_api = pd.read_csv('./data/raw/raw_df_jobs_title.csv')
-#     df_wscrapping = pd.read_csv('./data/raw/raw_df_scrapping_countries.csv')
+#     df_wscraping = pd.read_csv('./data/raw/raw_df_scrapping_countries.csv')
 #     career_job_info = pd.merge(df_db, df_api, left_on='normalized_job_code', right_on='uuid', how='outer',
 #                                sort=False, suffixes=('', '_y'))
 #     # career_job_info = career_job_info[
 #     #     ['uuid', 'dem_education_level', 'dem_full_time_job', 'normalized_job_code', 'title']]
-#     df_project = pd.merge(career_job_info, df_wscrapping, left_on='country_code', right_on='country_code',
+#     df_project = pd.merge(career_job_info, df_wscraping, left_on='country_code', right_on='country_code',
 #                           how='inner', sort=False, suffixes=('', '_y'))
 #
 #     df_project.to_csv('./data/raw/raw_df_project_merged.csv')
@@ -103,8 +119,8 @@ def acquire(path):
     api = get_api_provisional(table)
     # api = get_api_jobs(table)
     # print(f'Data API:\n{api}')
-    wscrapping = get_web_scrapping(api)
-    # print(f'Data WEB SCRAPPING:\n{wscrapping}')
-    df_merge = merge_dataframes(table,api,wscrapping)
+    wscraping = get_web_scraping(api)
+    # print(f'Data WEB SCRAPPING:\n{wscraping}')
+    df_merge = merge_dataframes(table,api,wscraping)
     # print(f'Data Merged:\n{df_merge}')
     return df_merge

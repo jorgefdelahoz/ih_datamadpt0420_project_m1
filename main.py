@@ -6,16 +6,18 @@ from p_analysis import m_analysis as man
 
 def argument_parser():
     parser = argparse.ArgumentParser(description='Specify inputs')
-    parser.add_argument("-p", "--path", help="Specify .db database path", required=True, type=str)
-    parser.add_argument("-c", "--country", help="Select country", type=str, default='all')
+    parser.add_argument("-p", "--path", help="Specify .db database path. Example: -p /home/user/Documents/pollas.db", required=True, type=str)
+    parser.add_argument("-c", "--country", help="Select country ***Default defined by ALL countries***", type=str, default='all')
     args = parser.parse_args()
     return args
 
 
 def main(arguments):
-
-    print('starting pipeline...')
-    print(f'\nTABLE:\tdf_database_merge\n-------------------')
+    print('Starting pipeline...',end='')
+    time.sleep(1)
+    print('....', end='')
+    time.sleep(1)
+    print('....')
     df_project = mac.acquire(arguments.path)
 
     data_merged = mwr.wrangling(df_project)
@@ -26,6 +28,7 @@ def main(arguments):
     print(data_project_analysed)
 
     # Bonus 1:
+    print('Getting Opinions...')
     data_opinions = man.judgement(df_project)
     data_opinions.to_csv('./data/results/Bonus1-Data_Opinions.csv')
     print(data_opinions)
