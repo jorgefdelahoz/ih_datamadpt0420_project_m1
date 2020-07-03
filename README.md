@@ -34,8 +34,13 @@ Report generator at date execution.
 [Web Eurostat](https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Country_codes) 
 
 ### :see_no_evil: **Usage**
-
-Parameters, return values, known issues, thrown errors.
+Arguments HELP:
+`  -h, --help            show this help message and exit
+   -p PATH, --path PATH  Specify .db database path. Example: -p
+                        /home/user/Documents/pollas.db
+   -c COUNTRY, --country COUNTRY
+                        Select country ***Default defined by ALL countries***`
+                        
 
 ### :file_folder: **Folder structure**
 ```
