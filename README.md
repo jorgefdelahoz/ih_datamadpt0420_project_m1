@@ -14,7 +14,7 @@ Alpha or... Beta, 2.1?
 Ironhack Data Analytics Module 1 Project. 
 
 ### :running: **One-liner**
-Having a one-liner that describes the pipeline/api/app is useful for getting an idea of what your code does in slightly greater detail. 
+Retrieve Jobs Title with DDBB, API & Web Scrapping.
 
 ### :computer: **Technology stack**
 Libraries necesaries: Python, Pandas, Numpy, Argparse, SqlAlchemy, Jsonschema, BeautifulSoup4, lxml, Requests. 
@@ -22,9 +22,10 @@ Pycharm v2020.1.2
 Jupyter Notebook
 
 ### :boom: **Core technical concepts and inspiration**
-Why does it exist? Frame your project for the potential user. Compare/contrast your project with other, similar projects so the user knows how it is different from those projects. Highlight the technical concepts that your project demonstrates or supports. Keep it very brief.
+Report generator at date execution.
 
 ### :wrench: **Configuration**
+Database
 Requeriments, prerequisites, dependencies, installation instructions.
 
 ### :see_no_evil: **Usage**
