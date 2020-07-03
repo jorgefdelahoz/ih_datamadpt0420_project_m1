@@ -1,4 +1,4 @@
-# Data Project README file
+# IRONHACK DATA ANALYTICS - MODULE 1: DATA PIPELINE
 
 The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
 Bearing that in mind, your job is to: 
@@ -51,23 +51,33 @@ Parameters, return values, known issues, thrown errors.
 
 ### :file_folder: **Folder structure**
 ```
-└── project
+└── ih_datamadpt0420_project_m1
     ├── __trash__
-    ├── .gitignore
-    ├── .env
-    ├── requeriments.txt
-    ├── README.md
-    ├── main_script.py
+    ├── data
+    |   ├── processed
+    |   |   └── data_merged_info.csv
+    |   ├── raw
+    |   |   ├── raw_data_project_m1.db
+    |   |   ├── raw_df_database_merge.csv
+    |   |   ├── raw_db_jobs_tile.csv
+    |   |   └── raw_df_scrapping_countries.csv
+    |   └── results
+    |       ├── Bonus1-Data_Opinions.csv
+    |       └── country_gender_analysed.csv
     ├── notebooks
-    │   ├── notebook1.ipynb
-    │   └── notebook2.ipynb
-    ├── package1
-    │   ├── module1.py
-    │   └── module2.py
-    └── data
-        ├── raw
-        ├── processed
-        └── results
+    |   └── draft.ipynb
+    ├── p_acquisition
+    |   └── m_acquisition.py
+    |── p_analysis
+    |   └── m_analysis.py
+    ├── p_wrangling
+    |   └── m_wrangling.py
+    ├── .env.txt
+    ├── .gitignore
+    ├── main.py
+    ├── README.md
+    └── requeriments.txt
+        
 ```
 
 > Do not forget to include `__trash__` and `.env` in `.gitignore` 
