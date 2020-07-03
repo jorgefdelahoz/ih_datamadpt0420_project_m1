@@ -1,11 +1,6 @@
 # IRONHACK DATA ANALYTICS - MODULE 1: DATA PIPELINE
 
-The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
-Bearing that in mind, your job is to: 
-- Tell them what it is (with context).
-- Show them what it looks like in action.
-- Show them how they use it.
-- Tell them any other relevant details.
+THIS API GOES WITH STABILISERS
 
 ![Image](https://66.media.tumblr.com/f12be6275f5fb05d9d3cff544a53077e/tumblr_mhjvnpzadC1ruw1vso2_400.gifv)
 
